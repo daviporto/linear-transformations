@@ -3,11 +3,11 @@ SRC = src
 OBJ = obj
 INC = include
 BIN = bin
-OBJS = $(OBJ)/main.o $(OBJ)/vertex.o $(OBJ)/graph.o $(OBJ)/sorter.o
-HDRS = $(INC)/vertex.h $(INC)/graph.h $(INC)/sorter.h
+OBJS = $(OBJ)/main.o $(OBJ)/segmentTree.o $(OBJ)/matrix.o
+HDRS = $(INC)/segmentTree.hpp $(INC)/matrix.hpp
 CFLAGS = -Wall -c -g -I$(INC) -std=c++11
 
-EXE = $(BIN)/tp2.out
+EXE = $(BIN)/tp3.out
 
 .PHONY: all clean
 
@@ -16,20 +16,17 @@ run: all
 
 all: $(EXE)
 
-$(BIN)/tp2.out: $(OBJS)
-	$(CC) -std=c++11 -g -o $(BIN)/tp2.out $(OBJS)
+$(BIN)/tp3.out: $(OBJS)
+	$(CC) -std=c++11 -g -o $(BIN)/tp3.out $(OBJS)
 
 $(OBJ)/main.o: $(HDRS) $(SRC)/main.cpp
 	$(CC) $(CFLAGS) -o $(OBJ)/main.o $(SRC)/main.cpp
 
-$(OBJ)/graph.o: $(HDRS) $(SRC)/graph.cpp
-	$(CC) $(CFLAGS) -o $(OBJ)/graph.o $(SRC)/graph.cpp
+$(OBJ)/matrix.o: $(HDRS) $(SRC)/matrix.cpp
+	$(CC) $(CFLAGS) -o $(OBJ)/matrix.o $(SRC)/matrix.cpp
 
-$(OBJ)/vertex.o: $(HDRS) $(SRC)/vertex.cpp
-	$(CC) $(CFLAGS) -o $(OBJ)/vertex.o $(SRC)/vertex.cpp
-
-$(OBJ)/sorter.o: $(HDRS) $(SRC)/sorter.cpp
-	$(CC) $(CFLAGS) -o $(OBJ)/sorter.o $(SRC)/sorter.cpp
+$(OBJ)/segmentTree.o: $(HDRS) $(SRC)/segmentTree.cpp
+	$(CC) $(CFLAGS) -o $(OBJ)/segmentTree.o $(SRC)/segmentTree.cpp
 
 
 clean:
