@@ -5,7 +5,7 @@
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 
-#define number unsigned int
+#define number long long unsigned int
 
 #define PRECISION 100000000
 

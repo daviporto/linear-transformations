@@ -4,7 +4,7 @@
     <target id="29122be8-0280-48a3-ada9-b2c2aaffe12b" name="sfdfdsf" defaultType="MAKE">
       <configuration id="c537736f-262f-4513-821f-51b849b41533" name="sfdfdsf" toolchainName="Default">
         <build type="MAKE">
-          <make targetName="run" />
+          <make targetName="all" />
         </build>
         <clean type="MAKE">
           <make targetName="clean" />

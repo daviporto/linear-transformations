@@ -5,7 +5,7 @@ INC = include
 BIN = bin
 OBJS = $(OBJ)/main.o $(OBJ)/segmentTree.o $(OBJ)/matrix.o
 HDRS = $(INC)/segmentTree.hpp $(INC)/matrix.hpp
-CFLAGS = -Wall -c -g -I$(INC) -std=c++11
+CFLAGS = -Wall -c  -I$(INC) -std=c++11
 
 EXE = $(BIN)/tp3.out
 
@@ -17,7 +17,7 @@ run: all
 all: $(EXE)
 
 $(BIN)/tp3.out: $(OBJS)
-	$(CC) -std=c++11 -g -o $(BIN)/tp3.out $(OBJS)
+	$(CC) -std=c++11 -o $(BIN)/tp3.out $(OBJS)
 
 $(OBJ)/main.o: $(HDRS) $(SRC)/main.cpp
 	$(CC) $(CFLAGS) -o $(OBJ)/main.o $(SRC)/main.cpp
